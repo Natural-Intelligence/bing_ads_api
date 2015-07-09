@@ -7,6 +7,8 @@ require 'ads_common/savon_service'
 require 'ads_common/parameters_validator'
 require 'ads_common/build/savon_generator'
 require 'ads_common/build/savon_registry'
+require 'ads_common/auth/oauth2_handler'
+require 'ads_common/auth/client_login_handler'
 require 'ads_common/savon_headers/base_header_handler'
 require 'ads_common/savon_headers/oauth_header_handler'
 
