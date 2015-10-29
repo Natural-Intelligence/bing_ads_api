@@ -73,11 +73,11 @@ class AdsCommonForBingAds::SavonService < AdsCommon::SavonService
 
   # Creates and sets up Savon client.
   def create_savon_client(endpoint, namespace)
-    Nori.advanced_typecasting = false
-    client = Savon::Client.new do |wsdl, httpi|
+    #Nori.advanced_typecasting = false
+    client = GoogleAdsSavon::Client.new do |wsdl, httpi|
       wsdl.endpoint = endpoint
       wsdl.namespace = namespace
-      wsdl.element_form_default = :qualified
+      #wsdl.element_form_default = :qualified
       AdsCommonForBingAds::Http.configure_httpi(@config, httpi)
     end
     client.config.raise_errors = false

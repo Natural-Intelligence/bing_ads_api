@@ -8,7 +8,7 @@ require 'ads_common/parameters_validator'
 require 'ads_common/build/savon_generator'
 require 'ads_common/build/savon_registry'
 require 'ads_common/auth/oauth2_handler'
-require 'ads_common/auth/client_login_handler'
+#require 'ads_common/auth/client_login_handler'
 require 'ads_common/savon_headers/base_header_handler'
 require 'ads_common/savon_headers/oauth_header_handler'
 
@@ -28,7 +28,7 @@ module AdsCommonForBingAds
 	# Auth
 	module Auth
 		class BaseHandler < AdsCommon::Auth::BaseHandler; end
-		class ClientLoginHandler < AdsCommon::Auth::ClientLoginHandler; end
+		#class ClientLoginHandler < AdsCommon::Auth::ClientLoginHandler; end
 		class OAuth2Handler < AdsCommon::Auth::OAuth2Handler; end
 	end
 	# Build

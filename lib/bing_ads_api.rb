@@ -44,12 +44,12 @@ module BingAdsApi
       auth_method = @config.read('authentication.method', :OAUTH2)
       return case auth_method
                when :CLIENTLOGIN
-                 @logger.warn("ClientLogin authentication method is now deprecated")
-                 AdsCommonForBingAds::Auth::ClientLoginHandler.new(
-                     @config,
-                     api_config.client_login_config(:AUTH_SERVER),
-                     api_config.client_login_config(:LOGIN_SERVICE_NAME)
-                 )
+                 @logger.error("ClientLogin authentication method was deprecated and now in sunset")
+                 #AdsCommonForBingAds::Auth::ClientLoginHandler.new(
+                  #   @config,
+                   #  api_config.client_login_config(:AUTH_SERVER),
+                    # api_config.client_login_config(:LOGIN_SERVICE_NAME)
+                 #)
                when :OAUTH
                  raise AdsCommon::Errors::Error,
                        'OAuth authorization method is deprecated, use OAuth2 instead.'
